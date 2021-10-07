@@ -25,6 +25,7 @@ typedef struct StudentInfo							// Define a data structure of student: name, id
 void get_info(StudInfo *grades_list, int stud_num); // To get information from input infos
 void Sort(StudInfo *grades_list, int len);			// Bubble sort the sequence of the array of Student struct adhering to their grades
 void PrintMaxAndMin(StudInfo *grades_list, int end);// To print out the information of the students with the maximum grades and minimum grades
+in
 
 int main(int argc, char *argv[])
 {
@@ -46,7 +47,7 @@ void get_info(StudInfo *grades_list, int stud_num)
 	int i;
 	for (i = 0; i < stud_num; i++)
 	{
-		scanf("%s%s%d", &grades_list[i]->name, &grades_list[i]->idnum, &grades_list[i]->grades);
+		scanf("%s%s%d", grades_list[i]->name, grades_list[i]->idnum, &grades_list[i]->grades);
 	}
 }
 

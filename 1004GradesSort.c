@@ -47,7 +47,7 @@ void get_info(StudInfo *grades_list, int stud_num)
 	int i;
 	for (i = 0; i < stud_num; i++)
 	{
-		unused = scanf("%s%s%d", grades_list[i]->name, grades_list[i]->idnum, &grades_list[i]->grades);
+		unused = scanf("%s%s%d", grades_list[i].name, grades_list[i].idnum, &grades_list[i].grades);
 	}
 }
 
@@ -58,11 +58,11 @@ void Sort(StudInfo *grades_list, int len)
 	{
 		for (j = 0; j < len -i -1; j++)
 		{
-			if ( grades_list[j]->grades < grades_list[j + 1]->grades )
+			if ( grades_list[j].grades < grades_list[j + 1].grades )
 			{
-				int temp = grades_list[j]->grades;
-				grades_list[j]->grades = grades_list[j + 1]->grades;
-				grades_list[j + 1]->grades = temp;
+				int temp = grades_list[j].grades;
+				grades_list[j].grades = grades_list[j + 1].grades;
+				grades_list[j + 1].grades = temp;
 			}
 		}
 	}
@@ -70,6 +70,6 @@ void Sort(StudInfo *grades_list, int len)
 
 void PrintMaxAndMin(StudInfo *grades_list, int end)
 {
-	printf("%s %s\n", grades_list[0]->name, grades_list[0]->idnum);
-	printf("%s %s", grades_list[end]->name, grades_list[end]->idnum);
+	printf("%s %s\n", grades_list[0].name, grades_list[0].idnum);
+	printf("%s %s", grades_list[end].name, grades_list[end].idnum);
 }

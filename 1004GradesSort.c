@@ -60,9 +60,9 @@ void Sort(StudInfo *grades_list, int len)
 		{
 			if ( grades_list[j].grades < grades_list[j + 1].grades )
 			{
-				int temp = grades_list[j].grades;
-				grades_list[j].grades = grades_list[j + 1].grades;
-				grades_list[j + 1].grades = temp;
+				StudInfo temp = grades_list[j];					
+				grades_list[j] = grades_list[j + 1];
+				grades_list[j + 1] = temp;
 			}
 		}
 	}
@@ -71,5 +71,5 @@ void Sort(StudInfo *grades_list, int len)
 void PrintMaxAndMin(StudInfo *grades_list, int end)
 {
 	printf("%s %s\n", grades_list[0].name, grades_list[0].idnum);
-	printf("%s %s", grades_list[end].name, grades_list[end].idnum);
+	printf("%s %s\n", grades_list[end - 1].name, grades_list[end - 1].idnum);
 }

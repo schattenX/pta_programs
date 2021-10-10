@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_SIZE 100
+#define MAX_SIZE 200								// When the MAX_SIZE was changed from 100 to 200, there is no more segfault
 
 typedef struct StudentInfo							// Define a data structure of student: name, id number and grades
 {
